@@ -14,7 +14,7 @@ angular.module('todo', ['ionic','pouchdb'])
         ////////////////////////
         // sync to CouchDb with pouchCollection reference
         ////////////////////////
-        $scope.sync = $scope.todos.$db.replicate.sync('http://127.0.0.1:5984/todoslib', {live: true})
+        $scope.sync = $scope.todos.$db.replicate.sync('http://couchdb.nicopace.alwaysdata.net/nicopace_pouchdbtest', {live: true})
           .on('error', function (err) {
             console.log("Syncing stopped");
             console.log(err);
